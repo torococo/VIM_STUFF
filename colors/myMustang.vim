@@ -15,9 +15,9 @@ let colors_name = "rafScheme"
 
 "//$ TEXT
 hi Cursor                 ctermbg=234
-hi Normal     ctermfg=253 ctermbg=234
-hi LineNr     ctermfg=253 ctermbg=234
-hi StatusLine ctermfg=253 ctermbg=234
+hi Normal     ctermfg=252 ctermbg=234
+hi LineNr     ctermfg=252 ctermbg=234
+hi StatusLine ctermfg=252 ctermbg=234
 "//<
 
 
@@ -62,7 +62,7 @@ hi Identifier  ctermfg=208 ctermbg=234
 "//<
 
 "//$TYPES
-hi Function    ctermfg=103 ctermbg=234
+hi Function    ctermfg=191 ctermbg=234
 hi Type        ctermfg=103 ctermbg=234
 "//<
 

@@ -75,7 +75,7 @@ Plugin 'wookiehangover/jshint.vim'
 Plugin 'marijnh/tern_for_vim'
 
 "CSHARP
-Plugin 'OmniSharp/omnisharp-vim'
+"Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -305,6 +305,10 @@ autocmd BufEnter,BufNew * set cindent
 autocmd BufEnter,BufNew * set tabstop=2
 autocmd BufEnter,BufNew * set softtabstop=2
 autocmd BufEnter,BufNew * set shiftwidth=2
+"CSHARP 4 Space tabs
+autocmd BufEnter,BufNew *.cs set tabstop=4
+autocmd BufEnter,BufNew *.cs set softtabstop=4
+autocmd BufEnter,BufNew *.cs set shiftwidth=4
 autocmd BufEnter,BufNew * set expandtab
 "autocmd BufEnter,BufNew *.js set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType javascript setlocal omnifunc=tern#Complete
@@ -430,7 +434,7 @@ hi SpellCap ctermbg=17
 colorscheme myMustang
 "colorscheme background
 "let g:rainbow_ctermfgs = ['gray','lightgray']
-let g:rainbow_ctermfgs = ['cyan','darkcyan','blue','darkblue','lightcyan']
+let g:rainbow_ctermfgs = ['lightcyan','cyan','darkcyan','blue']
 "colorscheme jungle
 "colorscheme mrRobot
 "colorscheme myWords

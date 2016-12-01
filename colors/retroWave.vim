@@ -62,7 +62,7 @@ hi Identifier  ctermfg=128 ctermbg=16
 "//<
 
 "//$TYPES
-hi Function    ctermfg=135 ctermbg=16
+hi Function    ctermfg=125 ctermbg=16
 hi Type        ctermfg=135 ctermbg=16
 hi Special    ctermfg=135 ctermbg=16
 "//<
