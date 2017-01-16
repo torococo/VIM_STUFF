@@ -34,6 +34,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe' "Plugin 'oblitum/YouCompleteMe' 
 Plugin 'Raimondi/delimitMate'
+"closes parenthesis
+
 "LEARN HOW TO USE THIS!!
 Plugin 'SirVer/ultisnips'
 
@@ -398,12 +400,13 @@ let g:rainbow_load_separately = [
     \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
     \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
     \ ]
-let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick','DarkOrchid3']
+"let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick','DarkOrchid3']
 "let g:rainbow_ctermfgs = ['blue','lightblue','lightcyan']
 "let g:rainbow_ctermfgs = ['lightcyan','lightmagenta','cyan','blue','magenta','darkcyan','darkred','white']
 "let g:rainbow_ctermfgs = ['lightcyan','lightmagenta','cyan','blue','magenta','darkcyan','darkred']
-let g:rainbow_ctermfgs = ['lightcyan','cyan','blue','darkcyan','darkblue']
-"let g:rainbow_ctermfgs = ['cyan','lightcyan']
+"let g:rainbow_ctermfgs = ['lightcyan','cyan','blue','darkcyan','darkblue']
+let g:rainbow_ctermfgs = ['lightcyan','cyan','lightmagenta','blue','magenta','darkcyan','darkmagenta','darkblue']
+"let g:rainbow_ctermfgs = ['lightyellow','lightblue','yellow','']
 hi SpellBad ctermbg=52
 hi SpellCap ctermbg=17
 ""    \ ['darkmagenta',   'RoyalBlue3'],
@@ -415,6 +418,8 @@ hi SpellCap ctermbg=17
 ""    \ ['cyan',    'chocolate3'],
 ""    \ ['lightcyan',    'RoyalBlue3'],
 ""    \ ['red',   'RoyalBlue3'],
+match Function "\<\w\+\ze("
+"match Function "\w\+\s*(/me=e-1,he=e-1"
 
 " PROFILING VIMSCRIPT:
 " profile start
@@ -431,10 +436,10 @@ hi SpellCap ctermbg=17
 "colorscheme gruvbox
 "colorscheme wombat256
 "colorscheme retroWave
-colorscheme myMustang
+"colorscheme growth
 "colorscheme background
 "let g:rainbow_ctermfgs = ['gray','lightgray']
-let g:rainbow_ctermfgs = ['lightcyan','cyan','darkcyan','blue']
+"let g:rainbow_ctermfgs = ['lightcyan','cyan','darkcyan','blue']
 "colorscheme jungle
 "colorscheme mrRobot
 "colorscheme myWords
@@ -453,8 +458,9 @@ let g:rainbow_ctermfgs = ['lightcyan','cyan','darkcyan','blue']
 "colorscheme inkpot
 "colorscheme leo
 "colorscheme distinguished
+colorscheme Benokai
 "colorscheme ir_black
-" colorscheme flatland 
+"" colorscheme flatland 
 "colorscheme flatcolor
 "colorscheme slate
 "colorscheme seoul256
@@ -515,7 +521,21 @@ let g:rainbow_ctermfgs = ['lightcyan','cyan','darkcyan','blue']
 set foldmethod=marker
 set foldmarker=//$,//<
 nnoremap <CR> Gza
-"nnoremap J Jx
+nnoremap <Leader>p :set paste <CR>
 au BufEnter,BufNew *.html nnoremap =r %w <CR> :!chromium-browser "file://$(readlink -f %)" <CR><CR>
 
 "au BufEnter * :normal GA
+
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+	:DelimitMateOn
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+	:DelimitMateOff
+endfunction
+
