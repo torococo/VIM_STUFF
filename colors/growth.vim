@@ -15,9 +15,9 @@ let colors_name = "rafScheme"
 
 "//$ TEXT
 hi Cursor                 ctermbg=234
-hi Normal     ctermfg=252 ctermbg=234
-hi LineNr     ctermfg=252 ctermbg=234
-hi StatusLine ctermfg=252 ctermbg=234
+hi Normal     ctermfg=193 ctermbg=234
+hi LineNr     ctermfg=193 ctermbg=234
+hi StatusLine ctermfg=193 ctermbg=234
 "//<
 
 
@@ -30,7 +30,7 @@ hi Visual        ctermbg=19
 if version >= 700
   hi MatchParen    ctermbg=19
   hi Pmenu		     ctermfg=221 ctermbg=234
-  hi PmenuSel		   ctermfg=255 ctermbg=234
+  hi PmenuSel		   ctermfg=209 ctermbg=234
 
   "ignore...
   hi CursorLine    ctermbg=234
@@ -41,38 +41,38 @@ endif
 
 
 "//$ SPECIAL
-hi StatusLineNC  ctermfg=255 ctermbg=232
-hi VertSplit     ctermfg=255 ctermbg=232
-hi Folded        ctermfg=255 ctermbg=232 
-hi Title         ctermfg=199             
-hi SpecialKey    ctermfg=255 ctermbg=232
+hi StatusLineNC  ctermfg=196 ctermbg=232
+hi VertSplit     ctermfg=196 ctermbg=232
+hi Folded        ctermfg=196 ctermbg=232 
+hi Title         ctermfg=202 ctermbg=234            
+hi SpecialKey    ctermfg=196 ctermbg=232
 "//<
 
 "//$ COMMENTS
-hi Comment     ctermfg=245 ctermbg=233
-hi Todo        ctermfg=245 ctermbg=234
+hi Comment     ctermfg=248 ctermbg=234
+hi Todo        ctermfg=217 ctermbg=234
 "//<
 
 "//$VALUES
-hi Boolean     ctermfg=208 ctermbg=234
-hi String      ctermfg=148 ctermbg=234
-hi Number      ctermfg=208 ctermbg=234
-hi Constant    ctermfg=208 ctermbg=234
-hi Identifier  ctermfg=208 ctermbg=234
+hi Boolean     ctermfg=226 ctermbg=234
+hi String      ctermfg=226 ctermbg=234
+hi Number      ctermfg=226 ctermbg=234
+hi Constant    ctermfg=130 ctermbg=234
+hi Identifier  ctermfg=130 ctermbg=234
 "//<
 
 "//$TYPES
-hi Function    ctermfg=191 ctermbg=234
-hi Type        ctermfg=103 ctermbg=234
+hi Function    ctermfg=46 ctermbg=234
+hi Type        ctermfg=226 ctermbg=234
 "//<
 
 "//$LOGIC AND CONTROL FLOW
-hi Statement  ctermfg=109 ctermbg=234
-hi Keyword    ctermfg=109 ctermbg=234
-hi Special    ctermfg=109 ctermbg=234
-hi PreProc    ctermfg=109 ctermbg=234
+hi Statement  ctermfg=112 ctermbg=234
+hi Keyword    ctermfg=112 ctermbg=234
+hi Special    ctermfg=208 ctermbg=234
+hi PreProc    ctermfg=112 ctermbg=234
 " Code-specific colors
-hi pythonOperator  ctermfg=109 ctermbg=234
+hi pythonOperator  ctermfg=2234 ctermbg=234
 "//<
 
 "//$IGNORE

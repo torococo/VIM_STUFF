@@ -44,7 +44,7 @@ endif
 hi StatusLineNC  ctermfg=209 ctermbg=232
 hi VertSplit     ctermfg=209 ctermbg=232
 hi Folded        ctermfg=209 ctermbg=232 
-hi Title         ctermfg=209             
+hi Title         ctermfg=202             
 hi SpecialKey    ctermfg=209 ctermbg=232
 "//<
 
@@ -57,8 +57,8 @@ hi Todo        ctermfg=217 ctermbg=16
 hi Boolean     ctermfg=208 ctermbg=16
 hi String      ctermfg=208 ctermbg=16
 hi Number      ctermfg=208 ctermbg=16
-hi Constant    ctermfg=208 ctermbg=16
-hi Identifier  ctermfg=208 ctermbg=16
+hi Constant    ctermfg=130 ctermbg=16
+hi Identifier  ctermfg=130 ctermbg=16
 "//<
 
 "//$TYPES
@@ -69,7 +69,7 @@ hi Type        ctermfg=130 ctermbg=16
 "//$LOGIC AND CONTROL FLOW
 hi Statement  ctermfg=216 ctermbg=16
 hi Keyword    ctermfg=216 ctermbg=16
-hi Special    ctermfg=216 ctermbg=16
+hi Special    ctermfg=204 ctermbg=16
 hi PreProc    ctermfg=216 ctermbg=16
 " Code-specific colors
 hi pythonOperator  ctermfg=216 ctermbg=16

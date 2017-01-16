@@ -14,10 +14,10 @@ let colors_name = "rafScheme"
 
 
 "//$ TEXT
-hi Cursor                 ctermbg=16
-hi Normal     ctermfg=245 ctermbg=16
-hi LineNr     ctermfg=245 ctermbg=16
-hi StatusLine ctermfg=245 ctermbg=16
+hi Cursor     ctermfg=46 ctermbg=16
+hi Normal     ctermfg=250 ctermbg=16
+hi LineNr     ctermfg=250 ctermbg=16
+hi StatusLine ctermfg=250 ctermbg=16
 "//<
 
 "//$ SPECIAL CASES
@@ -53,23 +53,23 @@ hi Todo        ctermfg=240 ctermbg=233
 "//<
 
 "//$VALUES
-hi Boolean     ctermfg=252 ctermbg=235
-hi String      ctermfg=252 ctermbg=235
-hi Number      ctermfg=252 ctermbg=235
-hi Constant    ctermfg=252 ctermbg=235
-hi Identifier  ctermfg=252 ctermbg=235
+hi Boolean     ctermfg=248 ctermbg=235
+hi String      ctermfg=248 ctermbg=235
+hi Number      ctermfg=248 ctermbg=235
+hi Constant    ctermfg=248 ctermbg=235
+hi Identifier  ctermfg=248 ctermbg=235
+hi Special    ctermfg=250 ctermbg=235
 "//<
 
 "//$TYPES
-hi Function    ctermfg=250 ctermbg=16
-hi Type        ctermfg=250 ctermbg=16
+hi Function    ctermfg=15 ctermbg=233
+hi Type        ctermfg=240 ctermbg=16
 "//<
 
 "//$LOGIC AND CONTROL FLOW
-hi Statement  ctermfg=255 ctermbg=16
-hi Keyword    ctermfg=255 ctermbg=16
-hi Special    ctermfg=255 ctermbg=16
-hi PreProc    ctermfg=255 ctermbg=16
+hi Statement  ctermfg=245 ctermbg=16
+hi Keyword    ctermfg=245 ctermbg=16
+hi PreProc    ctermfg=245 ctermbg=16
 hi pythonOperator  ctermfg=255
 "//<
 
