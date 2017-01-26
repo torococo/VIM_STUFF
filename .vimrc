@@ -179,7 +179,7 @@ au BufEnter,BufNew *.txt nnoremap k gk
 au BufEnter,BufNew *.html set syntax=javascript
 au BufEnter,BufNew *.txt set linebreak
 au BufEnter,BufNew *.txt set ft=txtfmt
-au BufEnter,BufNew *.tex nnoremap =r :w<CR> :!pdflatex %<CR><CR>:!open '%:r'.pdf &<CR><CR>
+au BufEnter,BufNew *.tex nnoremap =r :w<CR> :!pdflatex %<CR><CR>:!evince '%:r'.pdf &<CR><CR>
 au BufEnter,BufNew *.txt nnoremap =r :w<CR> :set background=dark<CR> :hardcopy %<CR> :!ps2pdf '%:r'.ps<CR><CR> :colorscheme mustang5<CR>
 nnoremap =i :%s/}/\r}\r/g<CR>
 nnoremap -i :%s/\n\s*}\s*\n\s*/}/g<CR>
@@ -405,7 +405,9 @@ let g:rainbow_load_separately = [
 "let g:rainbow_ctermfgs = ['lightcyan','lightmagenta','cyan','blue','magenta','darkcyan','darkred','white']
 "let g:rainbow_ctermfgs = ['lightcyan','lightmagenta','cyan','blue','magenta','darkcyan','darkred']
 "let g:rainbow_ctermfgs = ['lightcyan','cyan','blue','darkcyan','darkblue']
-let g:rainbow_ctermfgs = ['lightcyan','cyan','lightmagenta','blue','magenta','darkcyan','darkmagenta','darkblue']
+"let g:rainbow_ctermfgs = ['lightcyan','cyan','lightmagenta','blue','magenta','darkcyan','darkmagenta','darkblue']
+let g:rainbow_ctermfgs = ['lightmagenta','cyan','magenta','blue','darkmagenta','darkblue','lightcyan']
+"let g:rainbow_ctermfgs = ['red']
 "let g:rainbow_ctermfgs = ['lightyellow','lightblue','yellow','']
 hi SpellBad ctermbg=52
 hi SpellCap ctermbg=17
@@ -523,6 +525,7 @@ set foldmarker=//$,//<
 nnoremap <CR> Gza
 nnoremap <Leader>p :set paste <CR>
 au BufEnter,BufNew *.html nnoremap =r %w <CR> :!chromium-browser "file://$(readlink -f %)" <CR><CR>
+au BufEnter,BufNew *.py nnoremap =r %w <CR> :!python %<CR><CR>
 
 "au BufEnter * :normal GA
 
